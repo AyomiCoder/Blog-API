@@ -4,11 +4,12 @@
 
 ## Introduction
 
-Welcome to the Blog API documentation. This API allows you to perform various operations on a blogging platform, including user authentication, managing blog posts, and retrieving individual posts by their IDs. The API is built using Node.js and Express, with data stored in a MongoDB database.
+This API allows you to perform various operations on a blogging platform, including user authentication, managing blog posts, and retrieving individual posts by their IDs. The API is built using Node.js and Express, with data stored in a MongoDB database.
 
 ## Base URL
 
-The base URL for the API is `http://localhost:3000` by default. Make sure to replace it with the appropriate URL if you deploy the API to a different environment.
+The base URL for the API is `https://blog-h0gxnqryz-ayomicoder.vercel.app/` by default.
+
 
 ## Authentication
 
