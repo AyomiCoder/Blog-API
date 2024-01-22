@@ -1,4 +1,4 @@
-Certainly! Below is an updated and detailed documentation for the Blog API, including the new endpoint for retrieving a single post by its ID:
+
 
 # Blog API Documentation
 
