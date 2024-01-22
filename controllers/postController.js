@@ -8,8 +8,6 @@ async function createPost(req, res) {
       author: req.user._id
     });
     await post.save();
-   // Populate the author field before sending the response
-   await post.populate({ path: 'author', select: 'username' }).execPopulate();
    res.status(201).json(post);
   } catch (error) {
     res.status(500).send(error.message);
