@@ -2,12 +2,10 @@
 # Blog API Documentation
 
 ## Introduction
-This API allows you to perform CRUD operations including user authentication, managing blog posts. The API is built using Node.js and Express, with data stored in a MongoDB database.
+This API allows you to perform CRUD operations including user authentication, and managing blog posts. The API is built using Node.js and Express, with data stored in a MongoDB database.
 
 **Base URL**
-The base URL for the API is https://blog-h0gxnqryz-ayomicoder.vercel.app/ by default.
-
-**Hosted url might not work as intended, you can test locally**
+The base URL for the API is http://localhost:4040//. You can set your Port too.
 
 **Authentication**
 To access certain endpoints, user authentication is required. Authentication is done using JSON Web Tokens (JWT). To authenticate, include the JWT token in the Authorization header of your requests.
