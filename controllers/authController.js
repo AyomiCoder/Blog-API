@@ -11,7 +11,7 @@ async function register(req, res) {
       password: hashedPassword
     });
     await user.save();
-    res.sendStatus(201);
+    res.status(201).sendJson({ user });
   } catch (error) {
     res.status(500).send(error.message);
   }
@@ -25,7 +25,7 @@ async function login(req, res) {
   if (!validPassword) return res.status(401).send('Invalid password.');
 
   const token = jwt.sign({ _id: user._id, username: user.username }, config.secretKey);
-  res.header('Authorization', token).sendStatus(200);
+  res.header('Authorization', token).status(200).sendJson({token});
 }
 
 module.exports = { register, login };

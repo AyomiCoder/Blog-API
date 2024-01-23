@@ -27,7 +27,12 @@ To access certain endpoints, user authentication is required. Authentication is 
 **Expected Outcome:**
 ```json
 {
-  "Created": "201"
+  "user": {
+    "username": "username",
+    "password": "password hash",
+    "_id": "user id",
+    "__v": 0
+  }
 }
 ```
 
@@ -46,7 +51,7 @@ To access certain endpoints, user authentication is required. Authentication is 
 **Expected Outcome:**
 ```json
 {
-  200: Ok
+  "token": "jwt token"
 }
 ```
 
@@ -67,7 +72,12 @@ To access certain endpoints, user authentication is required. Authentication is 
 **Expected Outcome:**
 ```json
 {
-  Created
+  "title": "Your Blog Post Title",
+  "content": "Your Blog Post Content",
+  "author": "author key id",
+  "_id": "post id",
+  "timestamp": "post timestamp",
+  "__v": 0
 }
 ```
 
@@ -83,18 +93,17 @@ To access certain endpoints, user authentication is required. Authentication is 
   {
     "title": "Blog Post 1",
     "content": "Content of Blog Post 1",
-    "author": "author_username",
+    "author": "author key identifier",
     "_id": "post_id_1",
     "timestamp": "post_timestamp_1"
   },
   {
     "title": "Blog Post 2",
     "content": "Content of Blog Post 2",
-    "author": "author_username",
+    "author": "author key id",
     "_id": "post_id_2",
     "timestamp": "post_timestamp_2"
-  },
-  // ... other posts
+  }
 ]
 ```
 
@@ -107,11 +116,15 @@ To access certain endpoints, user authentication is required. Authentication is 
 **Expected Outcome:**
 ```json
 {
-  "title": "Your Blog Post Title",
-  "content": "Your Blog Post Content",
-  "author": "your_username",
-  "_id": "post_id",
-  "timestamp": "post_timestamp"
+  "_id": "post id",
+  "title": "Blog title",
+  "content": "your blog content",
+  "author": {
+    "_id": "author key id",
+    "username": "username"
+  },
+  "timestamp": "post timestamp",
+  "__v": 0
 }
 ```
 
@@ -131,14 +144,12 @@ To access certain endpoints, user authentication is required. Authentication is 
 **Expected Outcome:**
 ```json
 {
-  "message": "Blog post updated successfully",
-  "post": {
-    "title": "Updated Blog Post Title",
-    "content": "Updated Blog Post Content",
-    "author": "your_username",
-    "_id": "post_id",
-    "timestamp": "post_timestamp"
-  }
+  "_id": "post id",
+  "title": "updated blog title",
+  "content": "updated blog content",
+  "author": "author key id",
+  "timestamp": "post timestamp",
+  "__v": 0
 }
 ```
 
@@ -151,14 +162,7 @@ To access certain endpoints, user authentication is required. Authentication is 
 **Expected Outcome:**
 ```json
 {
-  "message": "Blog post deleted successfully",
-  "deletedPost": {
-    "title": "Deleted Blog Post Title",
-    "content": "Deleted Blog Post Content",
-    "author": "your_username",
-    "_id": "post_id",
-    "timestamp": "post_timestamp"
-  }
+  "message": "Post deleted successfully",
 }
 ```
 

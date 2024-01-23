@@ -32,7 +32,7 @@ async function getPostById(req, res) {
       return res.status(404).json({ message: 'Post not found' });
     }
 
-    res.json(post);
+    res.sendJson(post);
   } catch (error) {
     res.status(500).send(error.message);
   }
@@ -57,7 +57,7 @@ async function deletePost(req, res) {
     const post = await Post.findByIdAndDelete(req.params.id);
     if (!post) return res.status(404).send('Post not found.');
 
-    res.sendStatus(204);
+    res.sendJson({ message: 'Post deleted successfully' });
   } catch (error) {
     res.status(500).send(error.message);
   }

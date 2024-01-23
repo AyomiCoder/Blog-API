@@ -8,7 +8,7 @@
 1. **Node.js and npm:**
    Ensure that you have Node.js and npm (Node Package Manager) installed on your machine
 
-2. **Mongo DB:*
+2. **Mongo DB:**
 Create a free database cluster on Mongo DB Atlas and obtain your Connection string.
 
 ### Set Up the Blog API:
@@ -70,9 +70,7 @@ you can set your port.
    Replace `your-username` and `your-password` with your desired credentials.
 
 2. **Login to Obtain JWT Token:**
-   Send a `POST` request to `http://localhost:4040/auth/login` with the same credentials used for registration. 
-
-Retrieve the JWT token from the response header, copy it and save it somewhere.
+   Send a `POST` request to `http://localhost:4040/auth/login` with the same credentials used for registration.  This request is going to return a JWT token from the response header, copy it and save it somewhere.
 
 3. **Create a Blog Post:**
    Send a `POST` request to `http://localhost:4040/api/posts` with the following JSON body:
