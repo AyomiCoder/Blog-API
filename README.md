@@ -1,7 +1,7 @@
-##You can check the API documentaion above too.
+## You can check the API documentaion above too.
 
 
-#To run and test the API locally on your machine
+# To run and test the API locally on your machine
 
 ### Prerequisites:
 
