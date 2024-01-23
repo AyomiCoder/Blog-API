@@ -1,4 +1,4 @@
-## You can check the API documentaion above too.
+## You can check the API documentation above for more details about the API endpoints.
 
 
 # To run and test the API locally on your machine
